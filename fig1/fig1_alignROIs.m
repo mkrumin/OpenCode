@@ -6,7 +6,7 @@
 
 function alignROIs()
 
-baseDir = 'E:\OneDrive - University College London\16_Manuscripts\PPC\';
+baseDir = load_paper_dirs;
 %baseDir = 'C:\...' %change to your working directory which holds the OpenData and OpenCode folders
 
 usfac = 100; %upsampling factor to align pixels
@@ -21,7 +21,7 @@ i = 0;
 i = i + 1;
 xpdb{i}.mName 			= mName;
 xpdb{i}.expDate 		= expDateFixed;
-xpdb{i}.expNumStr       = expNumStrFixed;
+% xpdb{i}.expNumStr       = expNumStrFixed;
 xpdb{i}.taskName        = taskNameFixed;
 xpdb{i}.NPlanes         = NPlanesFixed;
 
@@ -47,7 +47,7 @@ immap_moved{1}  = pd_fixed;
 
 randomPl = 1;
 
-load(fullfile(baseDir, 'OpenCode', 'PrecomputedData', sprintf('regops_%s_%s.mat', mName,expDateFixed)))
+load(fullfile(baseDir, 'OpenData', 'PrecomputedData', sprintf('regops_%s_%s.mat', mName,expDateFixed)))
 mImg_fixed = ops1{randomPl}.mimg1; 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% moving %%%%%%%%%%%%%%%%%%%%%% 

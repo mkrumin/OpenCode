@@ -1,10 +1,10 @@
 %header:
 
-baseDir = 'E:\OneDrive - University College London\16_Manuscripts\PPC\';
+baseDir = load_paper_dirs;
 
 %baseDir = 'C:\...' %change to your working directory which holds the OpenData and OpenCode folders
 
-dataDir = fullfile(baseDir, 'OpenCode', 'PrecomputedData');
+dataDir = fullfile(baseDir, 'OpenData', 'PrecomputedData');
 
 mName 			= 'JL035';
 expDate 		= '2019-06-15';

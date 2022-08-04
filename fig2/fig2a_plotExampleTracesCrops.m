@@ -1,5 +1,5 @@
 function fig2a_plotExampleTracesCrops()
-baseDir = 'E:\OneDrive - University College London\04_Data\'
+baseDir = load_paper_dirs;
 
 %baseD= 'C:\...' %change to your working directory which holds the OpenData and OpenCode folders
 

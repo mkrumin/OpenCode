@@ -7,7 +7,7 @@ NPlanes         = 2;
 
 NTasks = length(taskName);
 
-baseDir = 'E:\OneDrive - University College London\04_Data\'
+baseDir = load_paper_dirs;
 
 %baseDir = 'C:\...' %change to your working directory which holds the OpenData and OpenCode folders
 
@@ -46,9 +46,9 @@ else
 end
 
 %%plot TM and SW separately
-cmap=colormap('gray');
 
 figure('Position', [567 720 779 174])
+cmap=colormap('gray');
 subplot(1,2,1)
 imagesc(convPlot(ix,1:size(fData{TMIdx},2)));
 colormap(flipud(cmap));

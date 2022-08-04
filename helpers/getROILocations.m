@@ -3,14 +3,14 @@ if nargin < 4
     forceRerun = false;
 end
 
-baseDir = 'E:\OneDrive - University College London\16_Manuscripts\PPC\';
+baseDir = load_paper_dirs;
 %baseDir = 'C:\...' %change to your working directory which holds the OpenData and OpenCode folders
 
-ROILocsFname = fullfile(baseDir, 'OpenCode', 'PrecomputedData', ...
-                sprintf('%s_%s_roilocs.mat', mName, expDate);
+ROILocsFname = fullfile(baseDir, 'OpenData', 'PrecomputedData', ...
+                sprintf('%s_%s_roilocs.mat', mName, expDate));
 
 if ~exist(ROILocsFname, 'file') | forceRerun
-    load(fullfile(baseDir, 'OpenCode', 'PrecomputedData', sprintf('regops_%s_%s.mat', mName,expDate)))
+    load(fullfile(baseDir, 'OpenData', 'PrecomputedData', sprintf('regops_%s_%s.mat', mName,expDate)))
     NPlanes = length(ops1);
     validPlanes 	= 2:NPlanes;
     NValidPlanes 	= length(validPlanes);

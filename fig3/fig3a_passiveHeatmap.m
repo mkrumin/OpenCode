@@ -6,7 +6,7 @@ NPlanes         = 2;
 
 NTasks = length(taskName);
 
-baseDir = 'E:\OneDrive - University College London\04_Data\'
+baseDir = load_paper_dirs;
 
 %baseDir = 'C:\...' %change to your working directory which holds the OpenData and OpenCode folders
 
@@ -40,7 +40,6 @@ mn = repmat(min(Ff, [], 2), 1, size(Ff,2));
 convPlot = (Ff - mn) ./ (mx-mn);
 
 %%plot TM and SW separately
-cmap=colormap('gray');
 
 cumulNFrames = countTaskFrames(session);
 
@@ -55,6 +54,7 @@ convPart = {convReEach{1}(:,30000:39000) ...
             convReEach{4}(:,20:9020)};
 
 figure('Position', [100 500 1000 200])
+cmap=colormap('gray');
 for ii = 1:4
     subplot(1,4, ii)
     imagesc(convPart{ii}(ix,:))

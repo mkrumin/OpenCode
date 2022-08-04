@@ -2,8 +2,8 @@
 %% takes average and mean proportions per contrast, and the average of their psycho curves
 
 function fig1_summaryPC()
-baseDir = 'E:\OneDrive - University College London\04_Data\'
 
+baseDir = load_paper_dirs;
 %baseDir = 'C:\...' %change to your working directory which holds the OpenData and OpenCode folders
 
 dataDir = fullfile(baseDir, 'OpenData', 'NeuralBehavioral');

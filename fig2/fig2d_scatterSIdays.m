@@ -1,5 +1,5 @@
 %
-baseDir = 'E:\OneDrive - University College London\04_Data\';
+baseDir = load_paper_dirs;
 ii = 0;
 mN 		= 'JL035';
 NPl     = 2;

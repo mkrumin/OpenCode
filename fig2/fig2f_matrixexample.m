@@ -1,5 +1,5 @@
 %writ 2021-06-17
-baseDir = 'E:\OneDrive - University College London\04_Data\';
+baseDir = load_paper_dirs;
 
 ii = 0;
 mN 		= 'JL035';
@@ -7,7 +7,7 @@ NPl     = 2;
 
 ii = ii + 1;
 xD{ii}     = '2019-06-25';
-tN{ii}     = {'SW', 'blankwheel', 'TM', 'blankball', 'passiiveBall'}; 
+tN{ii}     = {'SW', 'blankwheel', 'TM', 'blankball', 'passiveBall'}; 
 
 ii = ii + 1;
 xD{ii}     = '2019-06-26';

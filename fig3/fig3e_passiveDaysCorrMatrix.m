@@ -1,5 +1,5 @@
 %taken 2021-06-24 from 11_controls/regi4condsmat
-baseDir = 'E:\OneDrive - University College London\04_Data\';
+baseDir = load_paper_dirs;
 ii = 0;
 mN 		= 'JL035';
 NPl     = 2;
@@ -31,7 +31,7 @@ end
 figure('Position', [680 295 300 250])
 imagesc(corr([allDBTM allDBBB allDBSW allDBBW], 'type', 'spearman'))
 axis image
-colormap(redblue)
+% colormap(redblue)
 caxis([-1 1])
 xticklabels({'TM(1)', 'TM(2)', 'BB(1)', 'BB(2)', 'SW(1)', 'SW(2)', 'BW(1)', 'BW(2)'}) %day 1 or 2
 yticklabels({'TM(1)', 'TM(2)', 'BB(1)', 'BB(2)', 'SW(1)', 'SW(2)', 'BW(1)', 'BW(2)'})
